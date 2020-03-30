@@ -13,10 +13,10 @@ function deleteCookie(name) {
     var hoy = new Date();
     hoy.setMonth( hoy.getMonth() - 1);
     
-    document.cookie = name +'='+ value + ';expires=' + hoy.toUTCString()+';';
+    document.cookie = name +'=;expires='+ hoy.toUTCString()+';';
 }
 
-createCookie('name','Antonio')
+deleteCookie('name')
 
 var cookies = document.cookie;
 console.log(cookies);
